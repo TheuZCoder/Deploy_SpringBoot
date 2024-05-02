@@ -1,6 +1,6 @@
 FROM ubuntu:lastest AS build
 
-RUN apt-get update && apt-get install -y openjdk-11-jdk
+RUN apt-get update && apt-get install -y openjdk-17-jdk
 
 COPY . .
 
