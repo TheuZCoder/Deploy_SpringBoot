@@ -8,10 +8,10 @@ RUN apt-get install maven -y
 
 RUN mvn cleans install
 
-FROM openjdk-11-jdk-slim
+FROM openjdk-17-jdk-slim
 
 EXPOSE 8080
 
-COPY --from=built /target/gamestore.jar /app.jar
+COPY --from=built /target/gamestore.0.0.1-SNAPSHOT.jar /app.jar
 
 ENTRYPOINT ["java","-jar","app.jar"]
